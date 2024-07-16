@@ -1,10 +1,20 @@
 <template>
-  <div>All invoices</div>
+  <div>
+    <SearchBar/>
+    <AllInvoices/>
+  </div>
 </template>
 
 <script>
+import SearchBar from '@/components/SearchBar.vue';
+import AllInvoices from '@/components/AllInvoices.vue';
+
   export default {
     name: 'InvoicesView',
+    components:{
+      AllInvoices,
+      SearchBar,
+    },
     data() {
       return {}
     },

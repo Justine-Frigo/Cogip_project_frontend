@@ -12,7 +12,7 @@
 </template>
 <script>
 import LastContacts from '@/components/LastContacts.vue';
-import LastInvoices from '../components/LastInvoices.vue';
+import LastInvoices from '@/components/LastInvoices.vue';
 import LastCompanies from '@/components/LastCompanies.vue';
 
 export default {
