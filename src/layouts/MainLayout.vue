@@ -20,7 +20,8 @@
     <div class="flex justify-center"><img class="mt-10" src="../assets/img/line_footer.png" alt="yellow line"></div>
     <div class="flex flex-col items-center mt-6">
       <img src="../assets/img/logo_COGIP.svg" alt="logo cogip" class="mb-4">
-      <p class="flex items-center mb-2"><img class="mr-2" src="../assets/img/localisation.png" alt="localisation">Square des Martyrs, 6000 Charleroi</p>
+      <p class="flex items-center mb-2"><img class="mr-2" src="../assets/img/localisation.png" alt="localisation">Square
+        des Martyrs, 6000 Charleroi</p>
       <p class="flex items-center mb-2"><img class="mr-2" src="../assets/img/phone.png" alt="phone">(123)456-7890</p>
       <p class="flex items-center mb-4"><img class="mr-2" src="../assets/img/fax.png" alt="fax">(123)456-7890</p>
       <div class="flex items-center mb-4">
@@ -58,4 +59,3 @@ export default {
   methods: {}
 }
 </script>
-
