@@ -1,51 +1,54 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'HomePage',
-      component: () => import('../layouts/MainLayout.vue'),
+      path: "/",
+      name: "HomePage",
+      component: () => import("../layouts/MainLayout.vue"),
       children: [
         {
-          path: '',
-          name: 'Home',
-          component: () => import('../views/HomeView.vue'),
+          path: "",
+          name: "Home",
+          component: () => import("../views/HomeView.vue"),
         },
         {
-          path: '/invoices',
-          name: 'Invoices',
-          component: () => import('../views/InvoicesView.vue'),
-        },
-
-        {
-          path: '/companies',
-          name: 'Companies',
-          component: () => import('../views/CompaniesView.vue'),
+          path: "/invoices",
+          name: "Invoices",
+          component: () => import("../views/InvoicesView.vue"),
         },
 
         {
-          path: '/contacts',
-          name: 'Contacts',
-          component: () => import('../views/ContactsView.vue'),
+          path: "/companies",
+          name: "Companies",
+          component: () => import("../views/CompaniesView.vue"),
         },
 
         {
-          path: '/signup',
-          name: 'Signup',
-          component: () => import('../views/SignupView.vue'),
+          path: "/contacts",
+          name: "Contacts",
+          component: () => import("../views/ContactsView.vue"),
         },
 
         {
-          path: '/login',
-          name: 'Login',
-          component: () => import('../views/LoginView.vue'),
+          path: "/signup",
+          name: "Signup",
+          component: () => import("../views/SignupView.vue"),
         },
 
+        {
+          path: "/login",
+          name: "Login",
+          component: () => import("../views/LoginView.vue"),
+        },
 
-      ]
-
+        {
+          path: "/showcompany",
+          name: "ShowCompany",
+          component: () => import('../views/ShowCompanyView.vue'),
+        },
+      ],
     },
     // {
     //   path: '/about',
@@ -55,7 +58,7 @@ const router = createRouter({
     //   // which is lazy-loaded when the route is visited.
     //   component: () => import('../views/AboutView.vue')
     // }
-  ]
-})
+  ],
+});
 
-export default router
+export default router;

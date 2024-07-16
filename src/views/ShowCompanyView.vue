@@ -1,19 +1,19 @@
 <template>
   <div>
-    <SearchBar/>
-    <AllContacts/>
+    <Company/>
+    <img src="../assets/img/line.svg" alt="line">
+   
   </div>
 </template>
 
 <script>
-import AllContacts from '@/components/AllContacts.vue';
-import SearchBar from '@/components/SearchBar.vue';
+import Company from '@/components/Company.vue';
+
 
   export default {
-    name: 'ContactsView',
+    name: 'ShowCompanyView',
     components:{
-      SearchBar,
-      AllContacts,
+      Company,
     },
     data() {
       return {}
