@@ -1,12 +1,14 @@
 <template>
-  <div>
-    <h3 class="text-6xl font-extrabold mb-4">
+  <div class="ml-28">
+    <h3 class="text-6xl font-extrabold mb-14">
       PIED PIPPER
     </h3>
-    <p>Name: Pied Pipper</p>
-    <p>TVA: BE87 876 767 565</p>
-    <p>Country: Belgium</p>
-    <p>Type: Supplier</p>
+    <div class="mb-14">
+    <p><span class="font-extrabold">Name</span>: Pied Pipper</p>
+    <p><span class="font-extrabold">TVA</span>: BE87 876 767 565</p>
+    <p><span class="font-extrabold">Country</span>: Belgium</p>
+    <p><span class="font-extrabold">Type</span>: Supplier</p>
+  </div>
   </div>
 </template>
 

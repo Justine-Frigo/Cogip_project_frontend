@@ -1,7 +1,7 @@
 <template>
   <div>
     <Company/>
-    <img src="../assets/img/line.svg" alt="line">
+    <div class="flex justify-center"><img src="../assets/img/line.svg" alt="line"></div>
     <ContactPeople/>
     <img src="../assets/img/black notebook and green arm.png" alt="notebook">
     <img src="../assets/img/line.svg" alt="line">
