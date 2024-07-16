@@ -44,13 +44,13 @@ const router = createRouter({
         },
 
         {
-          path: "/showcompany",
+          path: "/show-company",
           name: "ShowCompany",
           component: () => import('../views/ShowCompanyView.vue'),
         },
 
         {
-          path: "/showcontact",
+          path: "/show-contact",
           name: "ShowContact",
           component: () => import('../views/ShowContactView.vue'),
         }

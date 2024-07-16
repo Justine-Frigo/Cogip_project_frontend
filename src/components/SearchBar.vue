@@ -10,7 +10,9 @@
   export default {
     name: 'SearchBar',
     data() {
-      return {}
+      return {
+        searchQuery: '',
+      }
     },
     computed: {},
     mounted() {},

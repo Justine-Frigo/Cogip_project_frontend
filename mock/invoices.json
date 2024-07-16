@@ -1,0 +1,38 @@
+[
+    {
+        "invoice_number":"F20220915-001",
+        "dates_due": "15/09/2022",
+        "company": "Jouet Jean-Michel",
+        "created_at": "25/09/2020"
+    },
+
+    {
+        "invoice_number":"F20220915-002",
+        "dates_due": "15/09/2022",
+        "company": "Dunder Mifflin",
+        "created_at": "25/09/2020"
+    },
+
+    {
+        "invoice_number":"F20220915-003",
+        "dates_due": "15/09/2022",
+        "company": "Pierre Cailloux",
+        "created_at": "25/09/2020"
+    },
+
+    {
+        "invoice_number":"F20220915-004",
+        "dates_due": "15/09/2022",
+        "company": "Pier Pipper",
+        "created_at": "25/09/2020"
+    },
+
+    {
+        "invoice_number":"F20220915-005",
+        "dates_due": "15/09/2022",
+        "company": "Raviga",
+        "created_at": "25/09/2020"
+    }
+
+    
+]

@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Peter Gregory",
+        "phone": "555-4567",
+        "mail": "peter.gregory@raviga.com",
+        "company": "Raviga",
+        "created_at": "25/09/2020"
+    },
+
+    {
+        "name": "Cameron How",
+        "phone": "555-8765",
+        "mail": "cam.how@mutiny.net",
+        "company": "Mutiny",
+        "created_at": "25/09/2020"
+    },
+
+    {
+        "name": "Henry George",
+        "phone": "555-6354",
+        "mail": "george@piedpiper.com",
+        "company": "Pied Piepper",
+        "created_at": "25/09/2020"
+    },
+
+    {
+        "name": "Jian Yang",
+        "phone": "555-8765",
+        "mail": "jian.yan@phoque.off",
+        "company": "Phoque Off",
+        "created_at": "25/09/2020"
+    },
+
+    {
+        "name": "Bertram Gilfoyle",
+        "phone": "555-5434",
+        "mail": "gilfoy@piedpiper.com",
+        "company": "Pied Pipper",
+        "created_at": "25/09/2020"
+    }
+]

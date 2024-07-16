@@ -1,6 +1,6 @@
 <template>
   <div class="p-8">
-    <h3 class="text-3xl font-extrabold mb-4 ">Last invoices</h3>
+    <h3 class="text-5xl font-extrabold mb-4 ">Last invoices</h3>
     <table class="min-w-full bg-white border border-gray-300">
       <thead class="bg-yellow-300">
         <tr>
@@ -11,35 +11,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="odd:bg-white even:bg-gray-100">
-          <td class="py-2 px-4 border-b border-gray-300">F20220915-001</td>
-          <td class="py-2 px-4 border-b border-gray-300">15/09/2022</td>
-          <td class="py-2 px-4 border-b border-gray-300">Jouet Jean-Michel</td>
-          <td class="py-2 px-4 border-b border-gray-300">25/09/2020</td>
-        </tr>
-        <tr class="odd:bg-white even:bg-gray-100">
-          <td class="py-2 px-4 border-b border-gray-300">F20220915-002</td>
-          <td class="py-2 px-4 border-b border-gray-300">15/09/2022</td>
-          <td class="py-2 px-4 border-b border-gray-300">Dunder Mifflin</td>
-          <td class="py-2 px-4 border-b border-gray-300">25/09/2020</td>
-        </tr>
-        <tr class="odd:bg-white even:bg-gray-100">
-          <td class="py-2 px-4 border-b border-gray-300">F20220915-003</td>
-          <td class="py-2 px-4 border-b border-gray-300">15/09/2022</td>
-          <td class="py-2 px-4 border-b border-gray-300">Pierre Cailloux</td>
-          <td class="py-2 px-4 border-b border-gray-300">25/09/2020</td>
-        </tr>
-        <tr class="odd:bg-white even:bg-gray-100">
-          <td class="py-2 px-4 border-b border-gray-300">F20220915-004</td>
-          <td class="py-2 px-4 border-b border-gray-300">15/09/2022</td>
-          <td class="py-2 px-4 border-b border-gray-300">Pier Pipper</td>
-          <td class="py-2 px-4 border-b border-gray-300">25/09/2020</td>
-        </tr>
-        <tr class="odd:bg-white even:bg-gray-100">
-          <td class="py-2 px-4 border-b border-gray-300">F20220915-005</td>
-          <td class="py-2 px-4 border-b border-gray-300">15/09/2022</td>
-          <td class="py-2 px-4 border-b border-gray-300">Raviga</td>
-          <td class="py-2 px-4 border-b border-gray-300">25/09/2020</td>
+        <tr class="odd:bg-white even:bg-gray-100" v-for="(invoice, index) in invoices" :key="index">
+          <td class="py-2 px-4 border-b border-gray-300 text-left">{{ invoice.invoice_number}}</td>
+          <td class="py-2 px-4 border-b border-gray-300 text-left">{{ invoice.dates_due }}</td>
+          <td class="py-2 px-4 border-b border-gray-300 text-left">{{ invoice.company }}</td>
+          <td class="py-2 px-4 border-b border-gray-300 text-left">{{ invoice.created_at }}</td>
         </tr>
       </tbody>
     </table>
@@ -47,14 +23,29 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'LastInvoices',
   data() {
-    return {}
+    return {
+      invoices: null,
+    }
   },
   computed: {},
-  mounted() {},
-  methods: {}
+  async mounted() {
+    this.invoices = await this.getLastInvoices()
+  },
+  methods: {
+    async getLastInvoices(){
+      try{
+        const response = await axios.get("../../mock/invoices.json");
+        return response.data
+      } catch(error){
+        console.error(error)
+      }
+    }
+  }
 }
 </script>
 

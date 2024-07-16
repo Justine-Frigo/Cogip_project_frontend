@@ -13,9 +13,13 @@
         <router-link :to="{ name: 'Login' }">Login</router-link>
       </div>
     </div>
+    <div class="flex flex-row justify-around items-center" v-if="$route.name == 'Home'">
+      <h1 class="text-8xl font-extrabold text-left uppercase ml-28">Manage your customers and invoices easily</h1>
+      <img src="../assets/img/image_homme_1.png" alt="homme">
+    </div>
     <img class="w-11/12 -mb-4 m-auto" src="../assets/img/Rectangle 10.png" alt="rectangle">
   </header>
-  <router-view class="mt-20"></router-view>
+  <router-view class="mt-8"></router-view>
   <footer class="bg-white py-10">
     <div class="flex justify-center"><img class="mt-10" src="../assets/img/line_footer.png" alt="yellow line"></div>
     <div class="flex flex-col items-center mt-6">

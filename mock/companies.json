@@ -1,0 +1,49 @@
+[
+    {   
+        "id": 1,
+        "name": "Raviga",
+        "tva": "US456 654 321",
+        "country": "United States",
+        "type": "Supplier",
+        "created_at": "25/09/2020"
+    },
+    {   
+        "id": 2,
+        "name": "Dunder Mifflin",
+        "tva": "US676 787 767",
+        "country": "United States",
+        "type": "Client",
+        "created_at": "25/09/2020"
+    },
+
+    {   
+        "id": 3,
+        "name": "Pierre Cailloux",
+        "tva": "FR 676 676 676",
+        "country": "France",
+        "type": "Supplier",
+        "created_at": "25/09/2020"
+    },
+
+    {   
+        "id": 4,
+        "name": "Pied Pipper",
+        "tva": "BE87 876 767 565",
+        "country": "Belgium",
+        "type": "Supplier",
+        "created_at": "25/09/2020"
+    },
+
+    {   
+        "id": 5,
+        "name": "Jouet Jean-Michel",
+        "tva": "FR 787 776 999",
+        "country": "France",
+        "type": "Client",
+        "created_at": "25/09/2020"
+    }
+
+
+    
+
+]

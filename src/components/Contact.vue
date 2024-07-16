@@ -1,17 +1,25 @@
 <template>
     <div>
-        <h3>Bertram Gilfoyle</h3>
-        <p>Contact: Bertram Gilfoyle</p>
-        <p>Phone: 555-5434</p>
-        <p>Mail: gilfoy@piedpipper.com</p>
-        <p>Company: Pied Pipper</p>
-        <img src="../assets/img/contact2.jpg" alt="contact">
+        <h3>{{contact.name}}</h3>
+        <p>Contact: {{contact.name}}</p>
+        <p>Phone: {{contact.phone}}</p>
+        <p>Mail: {{contact.email}}</p>
+        <p>Company: {{contact.company}}</p>
+        <img :src="contact.img" alt="contact">
     </div>
   </template>
   
   <script>
   export default {
     name: 'Contact',
+
+    props: {
+      contact: {
+        type: [Array, Object],
+        required: true
+      }
+    },
+
     data() {
       return {}
     },
