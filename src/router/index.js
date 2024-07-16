@@ -48,6 +48,12 @@ const router = createRouter({
           name: "ShowCompany",
           component: () => import('../views/ShowCompanyView.vue'),
         },
+
+        {
+          path: "/showcontact",
+          name: "ShowContact",
+          component: () => import('../views/ShowContactView.vue'),
+        }
       ],
     },
     // {
