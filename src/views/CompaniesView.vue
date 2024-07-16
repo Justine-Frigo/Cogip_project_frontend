@@ -1,10 +1,21 @@
 <template>
-  <div></div>
+  <div>
+    <SearchBar/>
+    <AllCompanies/>
+  </div>
 </template>
 
 <script>
+import AllCompanies from '@/components/AllCompanies.vue';
+import SearchBar from '@/components/SearchBar.vue';
+
   export default {
     name: 'CompaniesView',
+    components:{
+      AllCompanies,
+      SearchBar,
+
+    },
     data() {
       return {}
     },
