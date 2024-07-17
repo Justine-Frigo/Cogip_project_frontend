@@ -1,8 +1,15 @@
 <template>
     <header>
         <div>
-            <nav class="flex flex-col w-2/12 min-h-full">
-                <img class="w-40 h-40 rounded-full" src="../assets/img/contact1.svg" alt="contact">
+        <h2 class="text-3xl font-extrabold">Dashboard</h2>
+        <h3>Welcome back Henry!</h3>
+        <p>You can here add an invoice, a company or some contacts</p>
+        <img src="../assets/img/Rectangle 22.png" alt="rectangle">
+        <img src="../assets/img/illustr.png" alt="illustr"></div>
+              
+        <div>
+            <nav>
+                <img src="../assets/img/contact1.svg" alt="contact">
                 <h3>Henry George</h3>
                 <img src="../assets/img/line.svg" alt="line">
                 <router-link :to="{ name: 'Dashboard' }">Dashboard</router-link>
