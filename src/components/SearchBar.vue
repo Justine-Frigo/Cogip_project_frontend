@@ -1,5 +1,5 @@
 <template>
-  <div>   <input class="border-solid border-2 border-slate-400 rounded-lg p-3"
+  <div>   <input class="border-solid border-2 border-slate-400 rounded-lg p-3 relative left-[1000px] top-32"
       type="text" 
       v-model="searchQuery" 
       placeholder="Search"
