@@ -1,6 +1,6 @@
 <template>
     <div class="p-8">
-        <h3 class="text-5xl font-extrabold mb-4 ">Last invoices</h3>
+        <h3 class="text-5xl font-extrabold mb-20 ">Last invoices</h3>
         <table class="min-w-full bg-white border border-gray-300">
             <thead class="bg-yellow-300">
                 <tr>
