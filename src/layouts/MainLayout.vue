@@ -11,6 +11,7 @@
       <div class="text-2xl font-semibold flex flex-row justify-around w-2/12">
         <router-link :to="{ name: 'Signup' }" class="hover:bg-white hover:rounded px-2 py-1 transition">Sign up</router-link>
         <router-link :to="{ name: 'Login' }"class="hover:bg-white hover:rounded px-2 py-1 transition">Login</router-link>
+        <!-- <router-link :to="{ name: 'Dashboard'}" class="hover:bg-white hover:rounded px-2 py-1 transition">Dashboard</router-link> -->
       </div>
     </div>
     <div class="flex flex-row justify-around items-center" v-if="$route.name == 'Home'">

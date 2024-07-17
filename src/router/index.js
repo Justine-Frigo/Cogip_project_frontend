@@ -53,8 +53,25 @@ const router = createRouter({
           path: "/show-contact",
           name: "ShowContact",
           component: () => import('../views/ShowContactView.vue'),
-        }
+        },
+
+      
       ],
+    },
+
+    {
+      path: "/dashboard",
+      name: "Dashboard",
+      component: () => import('../layouts/DashboardLayout.vue'),
+      children: [
+        {
+          path: "",
+          name: "Dashboard",
+          component: () => import('../views/DashboardView.vue'),
+        },
+
+      ],
+
     },
     // {
     //   path: '/about',
@@ -64,7 +81,7 @@ const router = createRouter({
     //   // which is lazy-loaded when the route is visited.
     //   component: () => import('../views/AboutView.vue')
     // }
-  ],
+  ]
 });
 
 export default router;
