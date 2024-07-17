@@ -16,7 +16,7 @@
           <td class="py-2 px-4 border-b border-gray-300 text-left">{{company.name}}</td>
           <td class="py-2 px-4 border-b border-gray-300 text-left">{{company.tva}}</td>
           <td class="py-2 px-4 border-b border-gray-300 text-left">{{company.country}}</td>
-          <td class="py-2 px-4 border-b border-gray-300 text-left">{{company.type}}</td>
+          <td class="py-2 px-4 border-b border-gray-300 text-left">{{company.type_id}}</td>
           <td class="py-2 px-4 border-b border-gray-300 text-left">{{company.created_at}}</td>
         </tr>
        
@@ -41,7 +41,11 @@ export default {
   methods: {
     async getLastCompanies(){
       try{
-        const response = await axios.get("../../mock/companies.json");
+        const response = await axios.get("http://cogip_project.test/companies", {
+          params:{
+            limit: 5,
+          }
+        });
         return response.data
       } catch(error){
         console.error(error)

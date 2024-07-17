@@ -15,8 +15,8 @@
       <tr class="odd:bg-white even:bg-gray-100" v-for="(contact, index) in contacts" :key="index">
         <td class="py-2 px-4 border-b border-gray-300 text-left">{{contact.name}}</td>
         <td class="py-2 px-4 border-b border-gray-300 text-left">{{ contact.phone }}</td>
-        <td class="py-2 px-4 border-b border-gray-300 text-left">{{ contact.mail }}</td>
-        <td class="py-2 px-4 border-b border-gray-300 text-left">{{ contact.company }}</td>
+        <td class="py-2 px-4 border-b border-gray-300 text-left">{{ contact.email }}</td>
+        <td class="py-2 px-4 border-b border-gray-300 text-left">{{ contact.company_id }}</td>
         <td class="py-2 px-4 border-b border-gray-300 text-left">{{ contact.created_at }}</td>
       </tr>
       </tbody>
@@ -40,8 +40,12 @@ export default {
   methods: {
     async getLastContacts(){
       try{
-        const response = await axios.get("../../mock/contacts.json");
-        return response.data
+        const response = await axios.get("http://cogip_project.test/contacts", {
+          params:{
+            limit: 5,
+          }
+        });
+        return response.data.data
       } catch(error){
         console.error(error)
       }
