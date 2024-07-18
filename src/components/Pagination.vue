@@ -1,5 +1,5 @@
 <template>
-    <div class="w-max border-2 flex flex-row gap-2 ">
+    <div class="w-max border-2 flex flex-row gap-2">
         <button 
         class="rounded-lg p-4" 
         :class="page === data.currentPage ? 'bg-sky-200' : 'bg-slate-100'" 

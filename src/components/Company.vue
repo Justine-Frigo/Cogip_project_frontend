@@ -3,7 +3,7 @@
     <h3 class="uppercase text-5xl font-extrabold mb-14 relative z-50">
       {{ companyData.name }}
     </h3>
-    <img class="absolute bottom-[400px] left-36" src="../assets/img/Rectangle 19.svg" alt="rectangle">
+    <!-- <img class="absolute bottom-[400px] left-36" src="../assets/img/Rectangle 19.svg" alt="rectangle"> -->
     <div class="mb-14">
       <p><span class="font-extrabold">Name</span>: {{ companyData.name }}</p>
       <p><span class="font-extrabold">TVA</span>: {{ companyData.tva }}</p>

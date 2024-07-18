@@ -1,7 +1,7 @@
 <template>
  <div class="p-8">
     <h3 class="text-6xl font-extrabold mb-20 relative z-50 ">All invoices</h3>
-    <img class="absolute bottom-[311px] left-44" src="../assets/img/Rectangle 19.svg" alt="rectangle">
+    <!-- <img class="absolute bottom-[311px] left-44" src="../assets/img/Rectangle 19.svg" alt="rectangle"> -->
     <table class="min-w-full bg-white border border-gray-300">
       <thead class="bg-yellow-300">
         <tr>
