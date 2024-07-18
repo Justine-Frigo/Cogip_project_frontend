@@ -1,10 +1,16 @@
 <template>
-    <div></div>
+    <div class="grid grid-cols-2 gap-x-9">
+      <Statistics/>
+    </div>
   </template>
   
   <script>
+  import Statistics from '@/components/Statistics.vue'; 
     export default {
       name: 'DashboardView',
+      components:{
+        Statistics,
+      },
       data() {
         return {}
       },
