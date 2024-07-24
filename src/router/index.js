@@ -73,19 +73,19 @@ const router = createRouter({
 
         {
 
-          path: "dashboard-invoices",
+          path: "invoices",
           name: "DashboardInvoices",
           component: () => import('../views/DashboardInvoices.vue'),
         },
 
         {
-          path: "dashboard-companies",
+          path: "companies",
           name: "DashboardCompanies",
           component: () => import('../views/DashboardCompanies.vue'),
         },
 
         {
-          path: "dashboard-contacts",
+          path: "contacts",
           name: "DashboardContacts",
           component: () => import('../views/DashboardContacts.vue'),
         },
@@ -93,14 +93,6 @@ const router = createRouter({
       ],
 
     },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import('../views/AboutView.vue')
-    // }
   ]
 });
 
