@@ -40,7 +40,7 @@
         <img class="mx-1" src="../assets/img/Pinterest.png" alt="Pinterest">
         <img class="mx-1" src="../assets/img/RSS.png" alt="RSS">
       </div>
-      <img src="../assets/img/Separation.png" alt="séparation" class="mb-4">
+      <img src="../assets/img/line.svg" alt="line" class="mb-4">
       <nav class="uppercase flex flex-wrap justify-center gap-6 mb-4">
         <router-link :to="{ name: 'Home' }" class="hover:underline">Home</router-link>
         <router-link :to="{ name: 'Invoices' }" class="hover:underline">Invoices</router-link>

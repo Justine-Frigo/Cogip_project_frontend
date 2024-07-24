@@ -66,8 +66,28 @@ const router = createRouter({
       children: [
         {
           path: "",
-          name: "DashboardView",
+          name: "DashboardHome",
           component: () => import('../views/DashboardView.vue'),
+
+        },
+
+        {
+
+          path: "dashboard-invoices",
+          name: "DashboardInvoices",
+          component: () => import('../views/DashboardInvoices.vue'),
+        },
+
+        {
+          path: "dashboard-companies",
+          name: "DashboardCompanies",
+          component: () => import('../views/DashboardCompanies.vue'),
+        },
+
+        {
+          path: "dashboard-contacts",
+          name: "DashboardContacts",
+          component: () => import('../views/DashboardContacts.vue'),
         },
 
       ],

@@ -11,23 +11,23 @@
         <!-- Navigation Links -->
         <nav class="mt-6">
           <ul class="space-y-2">
-            <li>
-              <router-link :to="{ name: 'Dashboard' }" class="flex items-center px-6 py-3 text-gray-700 hover:bg-gray-200">
+         <li>
+              <router-link :to="{ name: 'DashboardHome' }" class="flex items-center px-6 py-3 text-gray-700 hover:bg-gray-200">
                 Dashboard
               </router-link>
             </li>
             <li>
-              <router-link :to="{ name: 'Invoices' }" class="flex items-center px-6 py-3 text-gray-700 hover:bg-gray-200">
+              <router-link :to="{ name: 'DashboardInvoices' }" class="flex items-center px-6 py-3 text-gray-700 hover:bg-gray-200">
                 Invoices
               </router-link>
             </li>
             <li>
-              <router-link :to="{ name: 'Companies' }" class="flex items-center px-6 py-3 text-gray-700 hover:bg-gray-200">
+              <router-link :to="{ name: 'DashboardCompanies' }" class="flex items-center px-6 py-3 text-gray-700 hover:bg-gray-200">
                 Companies
               </router-link>
             </li>
             <li>
-              <router-link :to="{ name: 'Contacts' }" class="flex items-center px-6 py-3 text-gray-700 hover:bg-gray-200">
+              <router-link :to="{ name: 'DashboardContacts' }" class="flex items-center px-6 py-3 text-gray-700 hover:bg-gray-200">
                 Contacts
               </router-link>
             </li>
