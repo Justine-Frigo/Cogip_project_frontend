@@ -1,12 +1,18 @@
 <template>
     <div> 
+      <NewContact />
 
     </div>
   </template>
   
   <script>
+import NewContact from '@/components/NewContact.vue';
+
   export default {
     name: 'DashboardContacts',
+    components: {
+      NewContact,
+    },
     data() {
       return {}
     },
