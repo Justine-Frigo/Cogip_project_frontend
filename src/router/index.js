@@ -19,6 +19,7 @@ const router = createRouter({
           component: () => import("../views/InvoicesView.vue"),
         },
 
+
         {
           path: "/companies",
           name: "Companies",
@@ -26,9 +27,21 @@ const router = createRouter({
         },
 
         {
+          path: "/company/:id?",
+          name: "ShowCompany",
+          component: () => import('../views/ShowCompanyView.vue'),
+        },
+
+        {
           path: "/contacts",
           name: "Contacts",
           component: () => import("../views/ContactsView.vue"),
+        },
+
+        {
+          path: "/show-contact",
+          name: "ShowContact",
+          component: () => import('../views/ShowContactView.vue'),
         },
 
         {
@@ -42,19 +55,6 @@ const router = createRouter({
           name: "Login",
           component: () => import("../views/LoginView.vue"),
         },
-
-        {
-          path: "/show-company",
-          name: "ShowCompany",
-          component: () => import('../views/ShowCompanyView.vue'),
-        },
-
-        {
-          path: "/show-contact",
-          name: "ShowContact",
-          component: () => import('../views/ShowContactView.vue'),
-        },
-
       
       ],
     },

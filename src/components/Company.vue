@@ -8,7 +8,7 @@
       <p><span class="font-extrabold">Name</span>: {{ companyData.name }}</p>
       <p><span class="font-extrabold">TVA</span>: {{ companyData.tva }}</p>
       <p><span class="font-extrabold">Country</span>: {{ companyData.country }}</p>
-      <p><span class="font-extrabold">Type</span>: {{companyData.type}}</p>
+      <p><span class="font-extrabold">Type</span>: {{companyData.type_id === 1 ? 'Supplier' : 'Customer'}}</p>
     </div>
   </div>
 </template>
