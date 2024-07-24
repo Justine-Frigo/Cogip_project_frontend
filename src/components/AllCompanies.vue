@@ -1,5 +1,5 @@
 <template>
-  <div class="p-8"> 
+  <div class="p-8" v-if="allCompanies"> 
     <h3 class="text-6xl font-extrabold mb-20 relative z-50 ">All companies</h3>
     <!-- <img class="absolute bottom-[302px] left-44" src="../assets/img/Rectangle 19.svg" alt="rectangle"> -->
     <table class="min-w-full bg-white border border-gray-300">
@@ -13,7 +13,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr class="odd:bg-white even:bg-gray-100" v-for="(company, index) in allCompanies" :key="index">
+        <tr class="odd:bg-white even:bg-gray-100" v-for="(company, index) in allCompanies.data" :key="index">
           <td class="py-2 px-4 border-b border-gray-300 text-left">{{company.name}}</td>
           <td class="py-2 px-4 border-b border-gray-300 text-left">{{company.tva}}</td>
           <td class="py-2 px-4 border-b border-gray-300 text-left">{{company.country}}</td>
@@ -22,21 +22,31 @@
         </tr>
         
       </tbody>
-    </table></div>
+    </table>
+    <Pagination :data="{ currentPage: currentPage, totalPages: totalPages }" @page-selected="handlePageSelected" />
+    </div>
 </template>
 
 <script>
 import axios from 'axios';
+import Pagination from './Pagination.vue';
 export default {
   name: 'AllCompanies',
+  components: {
+    Pagination,
+  },
   data() {
     return {
       allCompanies: null,
+      currentPage: null,
+      totalPages: null,
     }
   },
   computed: {},
   async mounted() {
     this.allCompanies = await this.getAllCompanies()
+    this.currentPage = this.allCompanies.current_page
+    this.totalPages = this.allCompanies.total_pages
   },
   methods: {
     async getAllCompanies(){
@@ -46,7 +56,22 @@ export default {
       } catch(error){
         console.error(error)
       }
-    }
+    },
+    async handlePageSelected(value) {
+      try {
+        const response = await axios.get("http://cogip_project.test/companies", {
+          params: {
+            page: value
+          }
+        });
+        this.allCompanies = response.data
+        this.currentPage = this.allCompanies.current_page
+        this.totalPages = this.allCompanies.total_pages
+
+      } catch (error){
+        console.error(error)
+      }
+    } 
   }
 }
 </script>
