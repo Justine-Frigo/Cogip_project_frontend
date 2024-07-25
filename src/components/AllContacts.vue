@@ -14,7 +14,7 @@
       </thead>
       <tbody>
         <tr class="odd:bg-white even:bg-gray-100" v-for="(contact, index) in allContacts.data" :key="index">
-          <td class="py-2 px-4 border-b border-gray-300 text-left">{{ contact.name }}</td>
+          <td class="py-2 px-4 border-b border-gray-300 text-left hover:underline"><router-link :to="{name: 'ShowContact', params: {id: contact.id}}">{{ contact.name }}</router-link></td>
           <td class="py-2 px-4 border-b border-gray-300 text-left">{{ contact.phone }}</td>
           <td class="py-2 px-4 border-b border-gray-300 text-left">{{ contact.email }}</td>
           <td class="py-2 px-4 border-b border-gray-300 text-left">{{ contact.company_id }}</td>

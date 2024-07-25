@@ -7,7 +7,7 @@
               <p><strong>Contact:</strong> {{ contact.name }}</p>
               <p><strong>Phone:</strong> {{ contact.phone }}</p>
               <p><strong>Mail:</strong> {{ contact.email }}</p>
-              <p><strong>Company:</strong> {{ contact.company }}</p>
+              <p><strong>Company:</strong> {{ contact.id_company }}</p>
           </div>
       </div>
       <div class="flex-shrink-0">

@@ -3,7 +3,6 @@
     <LastInvoices/>
     <div class="flex justify-end"><img src="../assets/img/black notebook and green arm.png" alt="notebook"></div>
     <LastContacts/>
-    <router-link :to="{ name: 'ShowContact' }" class="flex justify-center text-2xl hover:underline">Show Contact</router-link>
     <img src="../assets/img/bulb.png" alt="bulb">
     <LastCompanies/>
  

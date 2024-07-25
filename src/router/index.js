@@ -39,7 +39,7 @@ const router = createRouter({
         },
 
         {
-          path: "/show-contact",
+          path: "/contact/:id?",
           name: "ShowContact",
           component: () => import('../views/ShowContactView.vue'),
         },
