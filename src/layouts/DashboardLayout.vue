@@ -31,6 +31,11 @@
                 Contacts
               </router-link>
             </li>
+            <li>
+              <router-link :to="{ name: 'Home' }" class="flex items-center px-6 py-3 text-gray-700 hover:bg-gray-200">
+                Home
+              </router-link>
+            </li>
           </ul>
         </nav>
       </div>

@@ -11,7 +11,7 @@
           </div>
       </div>
       <div class="flex-shrink-0">
-          <img class="w-40 h-40 rounded-full" src="../assets/img/anonymous.png" alt="contact">
+          <img class="w-40 h-40 rounded-full" src="../assets/img/anonymous.png" alt="anonymous">
       </div>
   </div>
 </template>

@@ -1,18 +1,31 @@
 <template>
+  {{ authStore.token }}
   <header class="bg-yellow-300 min-h-72 flex flex-col">
     <div class="flex flex-row justify-around flex-1 items-center mt-12">
       <nav class="flex flex-row gap-14 *:text-2xl font-semibold w-7/12">
         <img src="../assets/img/logo_COGIP.svg" alt="logo Cogip">
-        <router-link :to="{ name: 'Home' }" class=" hover:border hover:border-black hover:rounded px-4 py-2 transition">Home</router-link>
-        <router-link :to="{ name: 'Invoices' }" class=" hover:border hover:border-black hover:rounded px-4 py-2 transition">Invoices</router-link>
-        <router-link :to="{ name: 'Companies' }"class=" hover:border hover:border-black hover:rounded px-4 py-2 transition">Companies</router-link>
-        <router-link :to="{ name: 'Contacts' }"class=" hover:border hover:border-black hover:rounded px-4 py-2 transition">Contacts</router-link>
+        <router-link :to="{ name: 'Home' }"
+          class=" hover:border hover:border-black hover:rounded px-4 py-2 transition">Home</router-link>
+        <router-link :to="{ name: 'Invoices' }"
+          class=" hover:border hover:border-black hover:rounded px-4 py-2 transition">Invoices</router-link>
+        <router-link :to="{ name: 'Companies' }"
+          class=" hover:border hover:border-black hover:rounded px-4 py-2 transition">Companies</router-link>
+        <router-link :to="{ name: 'Contacts' }"
+          class=" hover:border hover:border-black hover:rounded px-4 py-2 transition">Contacts</router-link>
       </nav>
-      <div class="text-2xl font-semibold flex flex-row justify-around w-2/12">
-        <router-link :to="{ name: 'Signup' }" class="hover:bg-white hover:rounded px-2 py-1 transition">Sign up</router-link>
-        <router-link :to="{ name: 'Login' }"class="hover:bg-white hover:rounded px-2 py-1 transition">Login</router-link>
+      <div class="text-2xl font-semibold flex flex-row justify-around w-2/12" v-if="!authStore.user">
+        <router-link :to="{ name: 'Signup' }" class="hover:bg-white hover:rounded px-2 py-1 transition">Sign
+          up</router-link>
+        <router-link :to="{ name: 'Login' }"
+          class="hover:bg-white hover:rounded px-2 py-1 transition">Login</router-link>
         <!-- <router-link :to="{ name: 'Dashboard'}" class="hover:bg-white hover:rounded px-2 py-1 transition">Dashboard</router-link> -->
       </div>
+      <div class="text-2xl font-semibold flex flex-row justify-around w-2/12" v-else>
+        <router-link :to="{ name: 'DashboardHome' }" class="hover:bg-white hover:rounded px-2 py-1 transition">Dashboard</router-link>
+        <button
+          class="hover:bg-white hover:rounded px-2 py-1 transition">Logout</button>
+      </div>
+
     </div>
     <div class="flex flex-row justify-around items-center" v-if="$route.name == 'Home'">
       <h1 class="text-8xl font-extrabold text-left uppercase ml-28">Manage your customers and invoices easily</h1>
@@ -54,10 +67,13 @@
 </template>
 
 <script>
+import { useAuthStore } from '../stores/authStore';
 export default {
   name: 'MainLayout.vue',
   data() {
-    return {}
+    return {
+      authStore: useAuthStore()
+    }
   },
   computed: {},
   mounted() { },
