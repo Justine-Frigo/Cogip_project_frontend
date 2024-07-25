@@ -37,6 +37,7 @@ export const useAuthStore = defineStore("auth", {
       this.token = null;
       this.user = null;
       delete axios.defaults.headers.common["Authorization"];
+      localStorage.removeItem('auth');
       router.push({ name: 'Home' });
     },
     async fetchUser() {

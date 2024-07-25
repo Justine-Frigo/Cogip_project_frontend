@@ -1,5 +1,4 @@
 <template>
-  {{ authStore.token }}
   <header class="bg-yellow-300 min-h-72 flex flex-col">
     <div class="flex flex-row justify-around flex-1 items-center mt-12">
       <nav class="flex flex-row gap-14 *:text-2xl font-semibold w-7/12">
@@ -22,7 +21,7 @@
       </div>
       <div class="text-2xl font-semibold flex flex-row justify-around w-2/12" v-else>
         <router-link :to="{ name: 'DashboardHome' }" class="hover:bg-white hover:rounded px-2 py-1 transition">Dashboard</router-link>
-        <button
+        <button @click="authStore.logout()"
           class="hover:bg-white hover:rounded px-2 py-1 transition">Logout</button>
       </div>
 

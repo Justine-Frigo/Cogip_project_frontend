@@ -6,7 +6,7 @@
         <div class="flex flex-col items-center py-6 border-b">
           <!-- Profile Picture -->
           <img src="../assets/img/contact1.svg" alt="profile" class="w-20 h-20 rounded-full">
-          <h3 class="mt-4 text-xl font-semibold">Henry George</h3>
+          <h3 class="mt-4 text-xl font-semibold">{{ authStore.user.firstName }} {{ authStore.user.lastName }}</h3>
         </div>
         <!-- Navigation Links -->
         <nav class="mt-6">
@@ -41,7 +41,7 @@
       </div>
         <!-- Logout -->
         <div class="flex items-center justify-center py-6 border-t">
-          <button class="flex items-center text-gray-700 hover:text-gray-900">
+          <button class="flex items-center text-gray-700 hover:text-gray-900" @click="authStore.logout">
             <img src="../assets/img/contact1.svg" alt="logout" class="w-6 h-6">
             <span class="ml-2">Logout</span>
           </button>
@@ -53,7 +53,7 @@
       <h2 class="text-4xl font-extrabold mb-20">Dashboard</h2>
       <div class="relative bg-[#9698D6] p-20 rounded-lg flex items-center">
         <div>
-          <h2 class="text-4xl font-bold text-white">Welcome back Henry!</h2>
+          <h2 class="text-4xl font-bold text-white">Welcome back {{authStore.user.firstName}}!</h2>
           <p class="mt-2 text-white">You can here add an invoice, a company or some contacts</p>
         </div>
         <div class="relative flex-1">
@@ -66,8 +66,15 @@
   </template>
   
   <script>
+  import { useAuthStore } from '../stores/authStore';
   export default {
     name: 'DashboardLayout',
+
+    data() {
+      return {
+        authStore: useAuthStore()
+      }
+    }
   }
   </script>
   
