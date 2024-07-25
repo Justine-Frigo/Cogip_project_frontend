@@ -55,7 +55,7 @@ export default {
                         limit: 5,
                     }
                 });
-                return response.data;
+                return response.data.data;
             } catch (error) {
                 console.error(error)
             }

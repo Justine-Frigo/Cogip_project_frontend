@@ -5,10 +5,10 @@
             <thead>
                 <tr class="*:text-left">
                     <th>
-                        Invoice Number
+                       Reference
                     </th>
                     <th>
-                        Dates
+                        Price
                     </th>
                     <th>
                         Company
@@ -18,14 +18,14 @@
             <tbody>
                 <tr v-for="(invoice, index) in dashboardLastInvoices" :key="index" class="h-12">
                     <td>
-                        {{ invoice.invoice_number }}
+                        {{ invoice.ref }}
                     </td>
                     <td>
-                        {{ invoice.dates_due }}
+                        {{ invoice.price }}
 
                     </td>
                     <td>
-                        {{ invoice.company }}
+                        {{ invoice.id_company }}
 
                     </td>
                 </tr>
@@ -50,8 +50,12 @@ export default {
     methods: {
         async getDashboardLastInvoices() {
             try {
-                const response = await axios.get("../../mock/invoices.json");
-                return response.data
+                const response = await axios.get("http://cogip_project.test/invoices", {
+                    params:{
+                        limit: 5,
+                    }
+                });
+                return response.data.data
             } catch (error) {
                 console.error(error)
             }
