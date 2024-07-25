@@ -7,11 +7,11 @@
               <p><strong>Contact:</strong> {{ contact.name }}</p>
               <p><strong>Phone:</strong> {{ contact.phone }}</p>
               <p><strong>Mail:</strong> {{ contact.email }}</p>
-              <p><strong>Company:</strong> {{ contact.id_company }}</p>
+              <p><strong>Company:</strong> {{ contact.company_id }}</p>
           </div>
       </div>
       <div class="flex-shrink-0">
-          <img class="w-40 h-40 rounded-full" :src="contact.img" alt="contact">
+          <img class="w-40 h-40 rounded-full" src="../assets/img/anonymous.png" alt="contact">
       </div>
   </div>
 </template>

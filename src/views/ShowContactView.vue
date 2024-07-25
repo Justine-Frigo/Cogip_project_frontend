@@ -1,6 +1,6 @@
 <template>
   <div v-if="!loading && contact">
-    <Contact :contact="contact"/>
+    <Contact :contact="contact" />
   </div>
 </template>
 
@@ -21,19 +21,35 @@ export default {
   },
   computed: {},
   async mounted() {
-    this.loading = true;
-    this.contact = await this.getContact();
-    this.loading = false;
+    try {
+      this.contact = await this.getContactData();
+      // this.getContacts()
+    } catch (error) {
+      console.error(error);
+    } finally {
+      this.loading = false;
+    }
   },
   methods: {
-    async getContact() {
+    async getContactData() {
       try {
-        const response = await axios.get('../../mock/piedPipper.json');
-        return response.data[0].contacts[0]
+        const response = await axios.get(`http://Cogip_project.test/contacts/${this.$route.params.id}`);
+        return response.data;
       } catch (error) {
-        console.error(error)
+        console.error(error);
       }
-    }
+    },
+    //   async getContacts(){
+    //     try{
+    //       const response1 = await axios.get("http://Cogip_project.test/contacts/11");
+    //       this.contacts.push(response1.data);
+    //       const response2 = await axios.get("http://Cogip_project.test/contacts/12");
+    //       this.contacts.push(response2.data);
+    //     } catch (error){
+    //       console.error(error);
+    //     }
+    //   } 
+    // }
   }
 }
 </script>
