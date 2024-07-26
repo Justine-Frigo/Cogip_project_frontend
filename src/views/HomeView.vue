@@ -6,7 +6,7 @@
     <img src="../assets/img/bulb.png" alt="bulb">
     <LastCompanies/>
  
-    <div class="flex justify-between mt-32 mb-24"><div class="flex items-center"><h2 class="text-9xl font-extrabold">WORK BETTER IN YOUR COMPANY</h2></div>
+    <div class="flex justify-between mt-32 mb-24"><div class="flex items-center"><h2 class="text-8xl font-extrabold ml-10">WORK BETTER IN YOUR COMPANY</h2></div>
     <img src="../assets/img/yellow_rectangle_comments.png" alt="comments"></div>
   </main>
 </template>
