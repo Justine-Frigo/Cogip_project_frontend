@@ -20,9 +20,9 @@
         <!-- <router-link :to="{ name: 'Dashboard'}" class="hover:bg-white hover:rounded px-2 py-1 transition">Dashboard</router-link> -->
       </div>
       <div class="text-2xl font-semibold flex flex-row justify-around w-2/12" v-else>
-        <router-link :to="{ name: 'DashboardHome' }" class="hover:bg-white hover:rounded px-2 py-1 transition">Dashboard</router-link>
-        <button @click="authStore.logout()"
-          class="hover:bg-white hover:rounded px-2 py-1 transition">Logout</button>
+        <router-link :to="{ name: 'DashboardHome' }"
+          class="hover:bg-white hover:rounded px-2 py-1 transition">Dashboard</router-link>
+        <button @click="authStore.logout()" class="hover:bg-white hover:rounded px-2 py-1 transition">Logout</button>
       </div>
 
     </div>
@@ -36,24 +36,33 @@
   <footer class="bg-white py-10">
     <div class="flex justify-center"><img class="mt-10" src="../assets/img/line_footer.png" alt="yellow line"></div>
     <div class="flex flex-col items-center mt-6">
-      <img src="../assets/img/logo_COGIP.svg" alt="logo cogip" class="mb-4">
-      <p class="flex items-center mb-2"><img class="mr-2" src="../assets/img/localisation.png" alt="localisation">Square
-        des Martyrs, 6000 Charleroi</p>
-      <p class="flex items-center mb-2"><img class="mr-2" src="../assets/img/phone.png" alt="phone">(123)456-7890</p>
-      <p class="flex items-center mb-4"><img class="mr-2" src="../assets/img/fax.png" alt="fax">(123)456-7890</p>
-      <div class="flex items-center mb-4">
-        <span class="mr-2">Social Media</span>
-        <img class="mx-1" src="../assets/img/Facebook.png" alt="facebook">
-        <img class="mx-1" src="../assets/img/Twitter.png" alt="twitter">
-        <img class="mx-1" src="../assets/img/LinkedIn.png" alt="linkedin">
-        <img class="mx-1" src="../assets/img/Youtube.png" alt="youtube">
-        <img class="mx-1" src="../assets/img/Instagram.png" alt="Instagram">
-        <img class="mx-1" src="../assets/img/GooglePlus.png" alt="GooglePlus">
-        <img class="mx-1" src="../assets/img/Pinterest.png" alt="Pinterest">
-        <img class="mx-1" src="../assets/img/RSS.png" alt="RSS">
+      <div class="flex flex-row justify-between w-3/5 mt-6">
+        <h2 class="text-5xl font-extrabold b border-solid border-4 border-yellow-400 h-max">COGIP</h2>
+        <div>
+          <p class="flex items-center mb-2"><img class="mr-2" src="../assets/img/localisation.png"
+              alt="localisation">Square
+            des Martyrs, 6000 Charleroi</p>
+          <div class="flex flex-row gap-20">
+            <p class="flex items-center mb-2"><img class="mr-2" src="../assets/img/phone.png" alt="phone">(123)456-7890
+            </p>
+            <p class="flex items-center mb-4"><img class="mr-2" src="../assets/img/fax.png" alt="fax">(123)456-7890</p>
+          </div>
+          <div class="flex items-center mb-20">
+            <span class="mr-2">Social Media</span>
+            <img class="mx-1" src="../assets/img/Facebook.png" alt="facebook">
+            <img class="mx-1" src="../assets/img/Twitter.png" alt="twitter">
+            <img class="mx-1" src="../assets/img/LinkedIn.png" alt="linkedin">
+            <img class="mx-1" src="../assets/img/Youtube.png" alt="youtube">
+            <img class="mx-1" src="../assets/img/Instagram.png" alt="Instagram">
+            <img class="mx-1" src="../assets/img/GooglePlus.png" alt="GooglePlus">
+            <img class="mx-1" src="../assets/img/Pinterest.png" alt="Pinterest">
+            <img class="mx-1" src="../assets/img/RSS.png" alt="RSS">
+          </div>
+        </div>
       </div>
       <img src="../assets/img/line.svg" alt="line" class="mb-4">
-      <nav class="uppercase flex flex-wrap justify-center gap-6 mb-4">
+      
+        <nav class="uppercase flex flex-wrap justify-evenly gap-6 mb-4">
         <router-link :to="{ name: 'Home' }" class="hover:underline">Home</router-link>
         <router-link :to="{ name: 'Invoices' }" class="hover:underline">Invoices</router-link>
         <router-link :to="{ name: 'Companies' }" class="hover:underline">Companies</router-link>
