@@ -53,8 +53,8 @@
       <!-- Logout -->
       <div class="flex items-center justify-center py-6 border-t">
         <button class="flex items-center text-gray-700 hover:text-gray-900" @click="authStore.logout">
-          <img src="../assets/img/anonymous.png" alt="logout" class="w-6 h-6">
-          <span class="ml-2">Logout</span>
+          <img src="../assets/img/anonymous.png" alt="logout" class="w-9 h-9">
+          <span class="ml-24">Logout</span>
         </button>
       </div>
     </aside>
