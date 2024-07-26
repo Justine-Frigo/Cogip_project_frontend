@@ -1,42 +1,66 @@
 <template>
-    <div class="w-max border-2 flex flex-row gap-2">
-        <button 
-        class="rounded-lg p-4" 
-        :class="page === data.currentPage ? 'bg-sky-200' : 'bg-slate-100'" 
-        v-for="(page, index) in data.totalPages"
-        @click="handleButtonClick(index + 1)"
-        >
-        {{ index + 1 }}
-    </button>
+    <div class="flex justify-center items-center gap-2 mt-10">
+      <button 
+        class="border border-slate-300 rounded-lg p-2 bg-slate-100 disabled:opacity-50" 
+        :disabled="data.currentPage === 1" 
+        @click="handleButtonClick(data.currentPage - 1)">
+        &lt;
+      </button>
+      <button 
+        v-for="page in pagesToShow" 
+        :key="page" 
+        class=" border border-slate-300 rounded-lg p-2" 
+        :class="page === data.currentPage ? 'bg-yellow-300' : 'bg-slate-100'" 
+        @click="handleButtonClick(page)">
+        {{ page }}
+      </button>
+      <button 
+        class="border border-slate-300 rounded-lg p-2 bg-slate-100 disabled:opacity-50" 
+        :disabled="data.currentPage === data.totalPages" 
+        @click="handleButtonClick(data.currentPage + 1)">
+        &gt;
+      </button>
     </div>
-</template>
-
-<script>
-export default {
+  </template>
+  
+  <script>
+  export default {
     name: 'Pagination',
     emits: ['page-selected'],
-
-    props:{
-        data:{
-            type:[Object, Array],
-            required: true,
-        }
+    props: {
+      data: {
+        type: Object,
+        required: true,
+      }
     },
-
-    data() {
-        return {
+    computed: {
+      pagesToShow() {
+        const pages = [];
+        const { currentPage, totalPages } = this.data;
+  
+        if (totalPages <= 5) {
+          for (let i = 1; i <= totalPages; i++) {
+            pages.push(i);
+          }
+        } else {
+          if (currentPage <= 3) {
+            pages.push(1, 2, 3, 4, '...', totalPages);
+          } else if (currentPage >= totalPages - 2) {
+            pages.push(1, '...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+          } else {
+            pages.push(1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages);
+          }
         }
+  
+        return pages;
+      }
     },
-    computed: {},
-    mounted() { },
     methods: {
-        handleButtonClick(value) {
-            this.$emit('page-selected', value)
-        }
-        
+      handleButtonClick(page) {
+        if (page === '...') return;
+        this.$emit('page-selected', page);
+      }
     }
-}
-</script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style></style>
+  }
+  </script>
+  
