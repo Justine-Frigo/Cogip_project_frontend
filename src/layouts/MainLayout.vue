@@ -60,16 +60,18 @@
           </div>
         </div>
       </div>
-      <img src="../assets/img/line.svg" alt="line" class="mb-4">
-      
-        <nav class="uppercase flex flex-wrap justify-evenly gap-6 mb-4">
-        <router-link :to="{ name: 'Home' }" class="hover:underline">Home</router-link>
-        <router-link :to="{ name: 'Invoices' }" class="hover:underline">Invoices</router-link>
-        <router-link :to="{ name: 'Companies' }" class="hover:underline">Companies</router-link>
-        <router-link :to="{ name: 'Contacts' }" class="hover:underline">Contacts</router-link>
-        <a href="#" class="hover:underline">PRIVACY POLICY</a>
-      </nav>
-      <p class="text-sm">&copy; 2022 COGIP Inc.</p>
+      <!-- <div><img src="../assets/img/line.svg" alt="line"></div> -->
+      <div class="flex flex-row justify-between items-center w-3/4 px-4 py-2 bg-white border-t">
+  <nav class="uppercase flex space-x-6">
+    <router-link :to="{ name: 'Home' }" class="hover:underline">Home</router-link>
+    <router-link :to="{ name: 'Invoices' }" class="hover:underline">Invoices</router-link>
+    <router-link :to="{ name: 'Companies' }" class="hover:underline">Companies</router-link>
+    <router-link :to="{ name: 'Contacts' }" class="hover:underline">Contacts</router-link>
+    <a href="#" class="hover:underline">Privacy Policy</a>
+  </nav>
+  <p class="text-sm text-gray-500">Copyright &copy; 2022 COGIP Inc.</p>
+</div>
+
     </div>
   </footer>
 </template>
